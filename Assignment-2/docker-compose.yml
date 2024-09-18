@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+ flask1:
+  build: ./flask1
+  container_name: users
+  command: user.py
+  restart: always
+  ports:
+   - "8080:80"
+  networks:
+   - mynet
+ flask2:
+  build: ./flask2
+  container_name: rides1
+  command: ride.py
+  restart: always
+  ports:
+    - "8000:80"
+  networks:
+    - mynet
+networks:
+ mynet:
+  driver: bridge
+  ipam:
+    driver: default
+
+

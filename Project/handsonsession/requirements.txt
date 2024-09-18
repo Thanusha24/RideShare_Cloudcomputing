@@ -1,0 +1,8 @@
+ipython
+pika
+kazoo
+flask
+flask-sqlalchemy
+requests
+docker
+pysqlite3
